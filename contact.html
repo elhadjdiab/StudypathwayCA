@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" >
+        <title>StudyPathwayCA - Accueil</title>
+        <link rel="stylesheet" href="contact.css">
+        <script>
+
+            function validateForm() {
+                var email = document.getElementById("email").value.trim(); // Trim pour enlever les espaces
+                var nom = document.getElementById("nom").value;
+                var prenom = document.getElementById("prenom").value;
+                var message = document.getElementById("message");
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                var nom_Prenom_pattern = /^[a-zA-Z]{2,}$/;
+
+
+                if (!nom_Prenom_pattern.test(nom)){
+                    alert("Le nom doit être comoposé de chaines de carractères.")
+                    return false;
+                }
+                else if((!nom_Prenom_pattern.test(prenom))) {
+                    alert("Le prenom doit être comoposé de chaines de carractères.")
+                }
+                else if (!emailPattern.test(email)) {
+                    alert("Veuillez entrer une adresse email valide.");
+                    return false;
+                } 
+                else {
+                    alert("Soumission réussie");
+                    return true;
+                }
+
+                console.log(nom + prenom + email + "\n"
+                    + message
+                );
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="logo">StudyPathwayCA</div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="images/facebook_icone.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter_icone.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="images/instagram_icone.png" alt="Instagram"></a>
+            </div>
+        </header>
+
+       <form id="form" action="" onsubmit=" return validateForm()">
+            <h2>Le formulaire de contact</h2>
+            <p>Veuillez remplir les champs suivantes pour nous parvenir votre message avec plus de précision possible.</p>
+            <div class="formulaire">
+                <label id= "nom_label"><strong>Entrez votre nom</strong></label><br>
+                <input id= "nom"  placeholder="votre nom" type="text" required><br>
+
+                <label><strong>Entrez votre prénom</strong></label><br>
+                <input id="prenom" placeholder="votre prenom" type="text" required><br>
+                
+                <label><strong>Couriel</strong></label><br>
+                <input id="email" placeholder="Votre email" type="email"  required autocomplete="on"><br>
+    
+                <label strong>Message</strong></label><br>
+                <textarea id="message" name="votre message"   placeholder="Votre message" rows="20" required></textarea><br>
+                <button type="submit">Soumettre</button> <br>
+            </div>
+        </form>
+
+        <!-- Footer -->
+         <br>
+    <footer>
+        <p>&copy; 2025 StudyPathwayCA. Tous droits réservés. </p>
+    </footer>
+    </body>
+</html>

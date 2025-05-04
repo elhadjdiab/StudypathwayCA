@@ -1,0 +1,248 @@
+/* DEFAULT STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding-top: 70px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: white;
+    color: #d32f2f;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('images/Neige.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 120px 20px;
+    color: #f4f4f4;
+    animation: fadeIn 2s ease-in-out;
+    background-size: cover;
+}
+
+
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.banner-button {
+    display: inline-block;
+    margin-top: 15px;
+    background: red;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.banner-button:hover {
+    background: #b71c1c;
+}
+
+#articles-title {
+    padding: 30px;
+}
+
+/* ARTICLES SECTION */
+.articles {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+    margin: 20px;
+}
+.article-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.article-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.article-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.article-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.article-card h3 {
+    margin: 10px 0;
+}
+.article-card p {
+    font-size: 14px;
+    color: gray;
+}
+.article-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+.article-card:hover {
+    transform: scale(1.05);
+}
+
+/* Section A propos */
+.a-propos {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #D32F2F;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-content .intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* NEWSLETTER SECTION */
+.newsletter {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d32f2f;
+    color: white;
+}
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.newsletter button:hover {
+    background: white;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .a-propos,
+.dark-mode .articles{
+    background-color:  #050321;
+    color: white;
+}
+
+/* SCROLL TO TOP BUTTON */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#scrollTopBtn:hover {
+    background-color: red;
+}

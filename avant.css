@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#h1-first{
+    text-align: center;
+}
+
+body {
+    padding: 5px;
+    background-color: #f9f9f9; /* Arrière-plan gris clair pour adoucir l’effet général */
+    color: #333;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    background-color: #D32F2F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.section img:hover {
+    transform: scale(1.1);
+}
+
+/* NAVIGATION */
+nav {
+    background-color: #333;
+    width: 250px;
+    position: fixed; 
+    top: 100px;
+    border: 1px solid #ddd;
+    background-color:  #f8f8f8;
+    padding: 10px;
+
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu > li {
+    margin-bottom: 5px;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease
+} 
+
+.menu > li > a:hover {
+    background-color: #bbb;
+}
+
+/* SOUS-MENU */
+.submenu {
+    list-style-type: disc;
+    display: block;
+    padding-left: 30px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #eee;
+}
+
+.menu > li:hover .submenu {
+    display: block;
+}
+
+/* STRUCTURE PRINCIPALE */
+.container {
+    margin-left: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* PARTIE CENTRALE */
+.centre {
+    margin-left: 250px;
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+/* PARTIE LATÉRALE */
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gauche {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gauche img {
+    width: 300px;
+    height: 200px;
+}
+
+.first_image {
+    max-width: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.second_image {
+    max-width: 300px;
+    object-fit: contain;
+}
+
+/* PARTIE DROITE */
+.droite {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.side a {
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+footer {
+    margin-top: 10px;
+    padding: 40px;
+    background-color: #D32F2F;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Le bouton sera caché au début */
+    z-index: 1000; /* S'assurer qu'il est toujours visible au-dessus du contenu */
+}
+
+#button:hover {
+    background-color: #b71c1c;
+}
+

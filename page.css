@@ -1,0 +1,274 @@
+ /* Le header */
+ .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    
+}
+
+.social-icons a {
+    margin-left: 15px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+*{
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* Styles globaux */
+    body {
+      font-family: Arial, sans-serif;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+    }
+
+    .menu {
+      
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      background-color: #333;
+      transition: background-color 0.3s;
+    }
+
+    .menu > li > a:hover {
+      background-color: #555;
+    }
+
+    /* Sous-menu */
+    .submenu {
+      display: none;
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #444;
+      border-radius: 5px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      width: 150px;
+    }
+
+    .submenu li a {
+      display: block; /* Permet de mieux gérer l'espacement */
+      padding: 12px 15px; /* Augmente l'espace intérieur */
+      margin: 0 0; /* Ajoute un espace entre chaque lien */
+      color: white;
+      text-decoration: none;
+      background-color: #444;
+      transition: background-color 0.3s;
+    }
+
+    .submenu li a:hover {
+      background-color: #555;
+      
+    }
+
+    /* Affichage des sous-menus au survol */
+    .menu > li:hover .submenu {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* Sous-menu de "Avant l'arrivée" */
+.menu > li:nth-child(1) .submenu {
+  background-color: #2c3e50; /* Bleu foncé */
+  width: 220px; /* Largeur différente */
+}
+
+.menu > li:nth-child(1):hover > a {
+  background-color: #34495e; /* Changement de couleur au survol */
+}
+
+/* Sous-menu de "Arrivée au Canada" */
+.menu > li:nth-child(2) .submenu {
+  background-color: #8e44ad; /* Violet */
+  width: 180px;
+}
+
+.menu > li:nth-child(2):hover > a {
+  background-color: #9b59b6;
+  text-align: center;
+}
+
+/* Sous-menu de "Forum et espaces communautaires" */
+.menu > li:nth-child(3) .submenu {
+  background-color: #27ae60; /* Vert */
+  width: 200px;
+}
+
+.menu > li:nth-child(3):hover > a {
+  background-color: #2ecc71;
+}
+
+/* Sous-menu de "Ressources et liens utiles" */
+.menu > li:nth-child(4) .submenu {
+  background-color: #d35400; /* Orange */
+  width: 210px;
+}
+
+.menu > li:nth-child(4):hover > a {
+  background-color: #e67e22;
+}
+
+/* Sous-menu de "Blog" */
+.menu > li:nth-child(5) .submenu {
+  background-color: #c0392b; /* Rouge */
+  width: 190px;
+}
+
+.menu > li:nth-child(5):hover > a {
+  background-color: #e74c3c;
+}
+
+/* Contenu principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    /*background-color: #f4f4f4; /* Ajout d'un fond pour un effet encadré */
+    border-radius: 10px;
+    max-width: 1000px; /* Pour limiter la largeur totale */
+    margin: auto; /* Centrer le bloc */
+}
+
+.description {
+    flex: 1;
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.description > a  {
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  padding: 10px, 20px;
+  margin: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: backgroud-color 0.3s; transform: 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  
+}
+
+.description a:hover {
+    transform: scale(1,1);
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 320px; /* Largeur définie pour éviter la distorsion */
+}
+
+.section {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+.section img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+/* Ajout du titre superposé */
+.section .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Noir semi-transparent */
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.section:hover img {
+    transform: scale(1.1);
+}
+
+.testimonials {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 50px;
+}
+blockquote {
+  font-style: italic;
+  color: #555;
+}
+
+      
+/* Footer */
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}

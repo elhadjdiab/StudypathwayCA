@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>StudyPathwayCA Blog</h1><br>
+        <button id="dark-mode-toggle">🌙 Mode sombre</button>
+        <nav>
+            <ul>
+                <li><a href="home.html" target="_blank">Accueil</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#A-propos" target="_blank">A propos</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2 class="fade-in">Explorer la vie au Canada 🍁</h2>
+        <p>Conseils, Guides & histoires pour les nouveaux arrivants. </p>
+        <a href="#articles" class="banner-button">Read More</a>
+    </section>
+
+    <!-- ARTICLES SECTION -->
+    <section class="articles" id="articles">
+        <h2 id="articles-ti">Articles</h2><br>
+        <div class="article-container">
+            <div class="article-card">
+                <img src="images/istockphoto-2105091005-1024x1024.jpg" alt="Study in Canada">
+                <h3>Comment étudier au Canada: le guide pas à pas</h3>
+                <p>Tout ce que vous avez besoins de savoir pour étudier au Canada en tant qu'étudiant étrangers.</p>
+                <a href="avant.html" target="_blank">Read More</a>
+            </div>
+            <div class="article-card">
+                <img src="images/TorontoByNight.jpg" alt="Best Cities">
+                <h3>Meuilleurs villes d'acceuil pour les nouveaux arrivants</h3>
+                <p>Decouvrez quelles villes sont mieux adaptés pour vivres en tant que nouvel arrivant.</p>
+                <a href="villes.html" target="_blank">Read More</a>
+            </div>
+            <div class="article-card">
+                <img src="images/Neige.jpg" alt="Canadian Culture">
+                <h3>Culture canadienne: à quoi s'attendre.</h3>
+                <p>Comprendre les coutumes, les traditions et le style de vie.</p>
+                <a href="culture.html" target="_blank">Read More</a>
+            </div>
+            <div class="article-card">
+                <img src="images/Neige.jpg" alt="Canadian Culture">
+                <h3>Culture canadienne: à quoi s'attendre.</h3>
+                <p>Comprendre les coutumes, les traditions et le style de vie.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- A propos card -->
+    <div id="A-propos" class="a-propos_first">
+        <section class="a-propos">
+            <div class="container2">
+                <h2 class="section-title">À propos de StudyPathwayCA</h2>
+                <div class="about-content">
+                    <p class="intro">StudyPathwayCA est votre ressource incontournable pour naviguer dans le processus d’admission aux études au Canada. Nous vous fournissons des informations claires et pratiques sur toutes les étapes nécessaires pour réussir votre projet d'études.</p>
+                    
+                    <p>Notre objectif est de vous accompagner dans votre démarche en offrant une vue d'ensemble 
+                        des différentes procédures administratives, des conseils sur la vie étudiante au Canada, 
+                        ainsi que des informations spécifiques sur les programmes d'études et les opportunités
+                         offertes par les établissements canadiens.
+                    </p>
+                    
+                    <p>Que vous soyez à la recherche d’informations sur le système éducatif canadien, 
+                        les démarches pour obtenir un visa étudiant, ou encore des conseils sur le logement et le coût de la vie, 
+                        StudyPathwayCA vous guide à chaque étape.
+                    </p>
+                    
+                    <p>Nous nous engageons à vous offrir des informations actualisées, fiables et pratiques pour vous préparer 
+                        au mieux à votre expérience d'études au Canada.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section class="newsletter">
+        <h2>Souscrire à notre Newsletter</h2>
+        <p>Obtenez les dernièrs guides et mise à jour dans votre messagerie.</p><br>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Souscrire</button>
+        </form>
+    </section>
+
+    <!-- SCROLL VERS LE HAUT -->
+    <button id="scrollTopBtn" title="Remonter en haut">🔝</button>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 StudyPathwayCA Blog. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Message de bienvenue
+        window.addEventListener("load", () => {
+            alert("Bienvenue sur le blog StudyPathwayCA 🍁");
+        });
+
+        // Validation email
+        document.querySelector("form").addEventListener("submit", function(e) {
+            const email = document.querySelector("input[type='email']").value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!regex.test(email)) {
+                e.preventDefault();
+                alert("Veuillez entrer une adresse email valide.");
+            } else {
+                alert("Merci pour votre inscription !");
+            }
+        });
+
+        // Dark Mode
+        document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        // Fade-in animation
+        const articles = document.querySelectorAll('.article-card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+        articles.forEach(article => observer.observe(article));
+
+        // Scroll vers le haut
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+        scrollTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>

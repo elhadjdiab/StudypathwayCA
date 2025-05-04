@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Processus d'admission</title>
+        <link rel="stylesheet" href="processus_admi.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">StudyPathwayCA</div>
+            <!-- Barre de recherche -->
+                    <div id="search-container" style="text-align: center; padding: 20px;">
+                        <input type="text" id="searchInput" placeholder="Rechercher un mot-clé..." style="padding: 8px; width: 60%; max-width: 200px">
+                        <button onclick="searchKeyword()" style="padding: 8px 8px; background-color: black; color: white;">Chercher</button>
+                    </div>
+                    <button id="dark-mode-toggle">🌙 Sombre</button>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><img src="images/facebook_icone.png" alt="Facebook"></a>
+                <a href="https://x.com/d_abdoulaye2" aria-label="Twitter"><img src="images/twitter_icone.png" alt="Twitter"></a>
+                <a href="#" aria-label="Instagram"><img src="images/instagram_icone.png" alt="Instagram"></a>
+            </div>
+        </header>
+
+        <aside>
+            <button id="toggleMenuButton" class="show" >☰ Menu</button>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#admissionQc">Québec</a>
+                        <ul class="submenu">
+                            <li><a href="#">CEGEPS</a></li>
+                            <li><a href="#">Collèges privés</a></li>
+                            <li><a href="#">Écoles professionnelles</a></li>
+                            <li><a href="#">Universités</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#admissionON">Ontario</a>
+                        <ul class="submenu">
+                            <li><a href="#">Les collèges</a></li>
+                            <li><a href="#">Les universités</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#admissionOthers">Autres provinces</a></li>
+                    <li><a href="#documents">Documents & Délais</a></li>
+                    <li><a href="https://www.canada.ca/fr/immigration-refugies-citoyennete/services/etudier-canada.html">Ressources</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div><h1 class="First_p">Processus d'admission</h1></div>
+        <!-- <a href="avant.html"><img src="images/fleche-gauche.png" alt="Retour à la page précédente"></a> -->
+        <main class="container">
+            <section id="intro" class="section">
+                <h2>Introduction</h2>
+                <div class="section_content">
+                    <p>Le Canada est un pays d'opportunités et de diversité, et ce n’est pas sans raison qu’il attire chaque année des milliers d'étudiants internationaux. En fonction de votre destination, vous découvrirez un processus d'admission unique. Le système éducatif canadien est vaste et adapté à tous les profils, que vous soyez intéressé par les sciences, l'art ou la technologie. Cette section vous aidera à comprendre les spécificités de chaque province pour vous orienter vers l'institution qui vous correspond le mieux.</p>
+                </div>
+            </section>
+
+            <section id="admissionQc" class="section">
+                <h2>Admission au Québec</h2>
+                <div class="section_content">
+                    <p>Le Québec est une province qui mêle culture francophone et dynamisme universitaire. Si vous choisissez d'y étudier, sachez que vous serez immergé dans une culture unique, à la fois moderne et historique. Le processus d'admission est structuré selon le type d'institution, ce qui vous permettra de trouver l'option qui vous convient le mieux.</p>
+                    
+                    <h3>Les CEGEPS</h3>
+                    <p>Les cégeps ont un système d'enseignement supérieur unique au Québec. Beaucoup d'étudiants québécois et internationaux choisissent cette option pour une formation plus pratique avant d'entrer à l'université. Bien que les cégeps soient accessibles via le <a href="https://www.sram.qc.ca">SRAM</a>, ils offrent une expérience d'apprentissage enrichissante, souvent plus personnalisée qu'à l'université.</p>
+                    <ul>
+                        <li>Collège Ahuntsic (Montréal)</li>
+                        <li>Collège Maisonneuve (Montréal)</li>
+                        <li>Collège Jean-de-Brébeuf (Montréal)</li>
+                        <li>Collège de Rosemont (Montréal)</li>
+                    </ul>
+                    
+                    <h3>Les collèges privés</h3>
+                    <p>Les collèges privés sont une excellente alternative pour ceux qui recherchent une formation spécialisée, souvent plus flexible et adaptée aux besoins individuels. Bien que le processus d'admission soit géré directement par chaque institution, les programmes offerts sont de qualité et bien reconnus.</p>
+                    <ul>
+                        <li>Collège Stanislas (Montréal)</li>
+                        <li>Collège international Marie de France (Montréal)</li>
+                        <li>Collège Saint-Jean-Vianney (Montréal)</li>
+                    </ul>
+
+                    <h3>Les universités</h3>
+                    <p>Les universités québécoises sont parmi les meilleures en Amérique du Nord, attirant des étudiants du monde entier. Le processus d'admission peut être compétitif, mais il est généralement bien structuré, et les établissements offrent une multitude de bourses et d'opportunités pour les étudiants étrangers.</p>
+                    <ul>
+                        <li>Université de Montréal</li>
+                        <li>Université Laval (Québec)</li>
+                        <li>Université de Sherbrooke</li>
+                        <li>Université McGill (Montréal)</li>
+                        <li>Université du Québec à Montréal (UQAM)</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="images/campus-347285_1280.jpg" alt="Université au Québec">
+                    <blockquote>L'université de Québec, un lieu d'innovation et d'excellence.</blockquote>
+                </div>
+            </section>
+
+            <section id="admissionON" class="section">
+                <h2>Admission en Ontario</h2>
+                <div class="section_content">
+                    <p>La province de l'Ontario est le cœur économique du Canada et abrite certaines des meilleures universités et collèges du pays. Les étudiants qui choisissent l'Ontario peuvent profiter de la diversité de ses institutions et de la proximité de centres économiques et culturels majeurs comme Toronto.</p>
+
+                    <h3>Admission aux universités</h3>
+                    <p>Les universités en Ontario sont reconnues pour leurs programmes de haute qualité. L'admission y est assez sélective, et le processus inclut souvent la soumission de vos notes et de vos lettres de recommandation. Il est également possible de candidater à plusieurs universités en même temps via le système centralisé de <a href="https://www.ocas.ca">OCAS</a>.</p>
+                    <ul>
+                        <li>Université de Toronto</li>
+                        <li>Université York (Toronto)</li>
+                        <li>Université d'Ottawa</li>
+                        <li>Université Western Ontario (London)</li>
+                        <li>Université McMaster (Hamilton)</li>
+                    </ul>
+
+                    <h3>Admission aux collèges</h3>
+                    <p>Les collèges de l'Ontario offrent un large éventail de programmes professionnels et techniques. Grâce à l'OCAS, il est facile de postuler dans plusieurs établissements en même temps, ce qui simplifie le processus pour les étudiants internationaux. Ces programmes sont souvent plus orientés vers l'emploi, ce qui est un grand avantage pour ceux qui souhaitent rapidement entrer dans le marché du travail.</p>
+                    <ul>
+                        <li>George Brown College (Toronto)</li>
+                        <li>Humber College (Toronto)</li>
+                        <li>Seneca College (Toronto)</li>
+                        <li>Fanshawe College (London)</li>
+                        <li>Durham College (Oshawa)</li>
+                    </ul>
+
+                    <h4>Étapes du processus d'admission</h4>
+                    <ol>
+                        <li>Créer un compte sur la plateforme OCAS</li>
+                        <li>Sélectionner l'établissement et le programme d'études</li>
+                        <li>Téléverser vos documents académiques et autres pièces justificatives</li>
+                    </ol>
+                </div>
+
+                <div class="image">
+                    <img src="images/UToronto.jpg" alt="Université au Québec">
+                    <blockquote>L'université de Toronto, un lieu d'innovation et d'excellence.</blockquote>
+                </div>
+                
+            </section>
+
+            <section id="admissionOthers" class="section">
+                <h2>Admission dans les autres provinces</h2>
+                <div class="section_content">
+                    <p>Chaque province du Canada a ses propres spécificités en termes d'admission et de vie étudiante. Que vous choisissiez de partir en Colombie-Britannique ou au Manitoba, il est essentiel de bien comprendre les particularités du système éducatif dans chaque région.</p>
+                    
+                    <h3>1. Colombie-Britannique</h3>
+                    <p>La Colombie-Britannique est un choix populaire pour les étudiants internationaux, grâce à son climat agréable et à ses universités réputées. Les admissions dans les institutions publiques sont gérées par un système centralisé, mais chaque établissement peut avoir ses propres critères spécifiques.</p>
+                    <ul>
+                        <li>Université de la Colombie-Britannique (UBC)</li>
+                        <li>Université Simon Fraser (SFU)</li>
+                        <li>Université de Victoria (UVic)</li>
+                    </ul>
+
+                    <h3>2. Alberta</h3>
+                    <p>Le système éducatif de l'Alberta est fortement axé sur les sciences appliquées et les programmes professionnels. Les étudiants peuvent bénéficier d'un enseignement de qualité dans des universités de renom comme l'Université de Calgary.</p>
+                    <ul>
+                        <li>Université de Calgary</li>
+                        <li>Université de l'Alberta (Edmonton)</li>
+                        <li>Université de Lethbridge</li>
+                    </ul>
+
+                    <h3>3. Saskatchewan</h3>
+                    <p>Bien que plus petite, la Saskatchewan offre une expérience universitaire de qualité dans des villes comme Saskatoon. Le coût de la vie y est plus abordable comparé à d'autres provinces, ce qui en fait un choix stratégique pour de nombreux étudiants internationaux.</p>
+                    <ul>
+                        <li>Université de la Saskatchewan</li>
+                        <li>Université de Regina</li>
+                    </ul>
+
+                    <h3>4. Manitoba</h3>
+                    <p>Le Manitoba, avec des universités comme l'Université du Manitoba, propose des programmes de qualité dans un environnement plus tranquille, loin de l'agitation des grandes métropoles. Les frais de scolarité y sont souvent plus abordables.</p>
+                    <ul>
+                        <li>Université du Manitoba</li>
+                        <li>Université de Winnipeg</li>
+                    </ul>
+
+                    <h3>5. Nouvelle-Écosse et Nouveau-Brunswick</h3>
+                    <p>Les provinces maritimes offrent un cadre de vie tranquille et agréable. Les universités comme l'Université Dalhousie en Nouvelle-Écosse ou l'Université du Nouveau-Brunswick sont bien réputées pour leurs programmes d'études en sciences sociales et en santé.</p>
+                    <ul>
+                        <li>Université Dalhousie (Halifax)</li>
+                        <li>Université du Nouveau-Brunswick</li>
+                    </ul>
+
+                    <h3>6. Autres considérations importantes</h3>
+                    <ul>
+                        <li>Les étudiants doivent souvent fournir une traduction certifiée de leurs documents académiques si ceux-ci ne sont pas en anglais ou en français.</li>
+                        <li>Les frais de scolarité varient d'une province à l'autre, avec des différences significatives entre l'Ontario, le Québec, et les provinces de l'Ouest.</li>
+                    </ul>
+
+                    <p>En résumé, le choix de la province est crucial pour une expérience étudiante réussie. Que vous recherchiez un environnement urbain dynamique ou un cadre plus calme et naturel, le Canada a tout à offrir, et chaque province présente des opportunités uniques pour les étudiants internationaux.</p>
+                </div>
+            </section>
+        </main>
+
+        <section>
+            <h2 id="new-h2" style="text-align: center;">Voici quelques universités à découvrir si vous souhaitez explorer davantage:</h2>
+            <div class="second_container">
+                <div class="section_in_2nd">
+                    <a href="https://www.ulaval.ca/">
+                        <img src="images/ULaval.jpg" alt="Université de Laval">
+                        <blockquote class="title_in_2nd">L'université de Laval, Nous sommes l'Université des idées qui changent le monde.</blockquote>
+                    </a>
+                </div>
+                <div class="section_in_2nd">
+                    <a href="https://www.umontreal.ca/" alt="Universite de Montreal">
+                        <img src="images/Montreal.jpg" alt="Universite de Montreal">
+                        <blockquote class="title_in_2nd">L'université de Montreal, Savoir, comprendre, partager.</blockquote>
+                    </a>">
+                </div>
+                <div class="section_in_2nd">
+                    <a href="https://www.utoronto.ca/">
+                        <img src="images/UToronto.jpg" alt="Universite de Toronto">
+                        <blockquote class="title_in_2nd">L'université de Toronto, Seek knowledge. Achieve excellence." (Cherchez la connaissance. Atteignez l'excellence.)</blockquote>
+                    </a>
+                </div>
+                <div class="section_in_2nd">
+                    <a href="https://www.ubc.ca/">
+                        <img src="images/Vancouver.jpg" alt="">
+                    <blockquote class="title_in_2nd">L'université de vancouver, It starts here." (Tout commence ici.)</blockquote>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <div>
+            <button id="button">En haut</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 StudyPathwayCA. Tous droits réservés.</p>
+        </footer>
+    </body>
+    <script>
+        // Affiche le bouton quand on descend dans la page
+        window.onscroll = function() {
+            const button = document.getElementById("button");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Quand le bouton est cliqué, on défile jusqu'en haut de la page
+        var button = document.getElementById("button");
+            button.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+        // Obtenez le bouton (le menu)
+        const toggleMenuButton = document.getElementById("toggleMenuButton");
+        const menu = document.querySelector(".menu");
+
+        // Ajoutez un gestionnaire d'événement pour cliquer sur le bouton
+        toggleMenuButton.addEventListener("click", function() {
+            //menu.classList.toggle("show"); // Ajouter/retirer la classe "show" pour afficher/masquer le menu
+            if (menu.classList.contains("show")) {
+            menu.classList.remove("show");
+            } else {
+                menu.classList.add("show");
+            }
+        });
+
+        // Dark Mode
+        document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode"); //appelle la proprieté dark-mode definit dans le CSS.
+        });
+
+    </script>
+    
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPathwayCA - Accueil</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js	"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">StudyPathwayCA</div>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><img src="images/facebook_icone.png" alt="Facebook"></a>
+            <a href="https://x.com/d_abdoulaye2" aria-label="Twitter"><img src="images/twitter_icone.png" alt="Twitter"></a>
+            <a href="#" aria-label="Instagram"><img src="images/instagram_icone.png" alt="Instagram"></a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#A-propos">A propos</a></li>
+            <li>
+                <a href="#">Guides ⌄</a>
+                <ul class="submenu">
+                    <li><a href="avant.html" target="_blank">Étudier au Canada</a></li>
+                    <li><a href="https://www.canada.ca/fr/immigration-refugies-citoyennete/services/etudier-canada/permis-etudes/outil-permis-etudes.html" target="_blank">Visa & Permis</a></li>
+                    <li><a href="logement.html" target="_blank">Logement</a></li>
+                    <li><a href="cout_de_la_vie.html" target="_blank">Coût de la vie</a></li>
+                </ul>
+            </li>
+            <li><a href="Blog.html" target="_blank">Blog</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+            <li>
+                <!-- Barre de recherche -->
+                <div id="search-container" style="text-align: center; padding: 20px;">
+                    <input type="text" id="searchInput" placeholder="Rechercher un mot-clé..." style="padding: 8px; width: 60%; max-width: 200px">
+                    <button onclick="searchKeyword()" style="padding: 8px 8px; background-color: blue;">Chercher</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="container">
+        <section class="description">
+            <h1 class="fade-in">Bienvenue sur StudyPathwayCA</h1>
+            <p>Un site dédié à tous ceux qui veulent venir étudier au Canada. Trouvez des informations essentielles sur les programmes, le visa, le logement et bien plus encore !</p>
+            <a href="avant.html" target="_blank" class="btn">Commencer</a>
+        </section>
+
+        <!-- Sections principales -->
+        <section class="sections">
+            <div class="section">
+                <a href="avant.html" target="_blank">
+                    <img src="images/people-6027028_1280.jpg" alt="Étudier au Canada">
+                    <div class="title">Étudier au Canada</div>
+                </a>
+            </div>
+            <div class="section">
+                <a href="https://www.canada.ca/fr/immigration-refugies-citoyennete/services/etudier-canada/permis-etudes/outil-permis-etudes.html" target="_blank">
+                    <img src="images/college-students-3990783_1280.jpg" alt="Visa et Permis">
+                    <div class="title">Visa & Permis</div>
+                </a>
+            </div>
+            <div class="section">
+                <a href="logement.html" target="_blank">
+                    <img src="images/campus-347285_1280.jpg" alt="Logement étudiant">
+                    <div class="title">Logement</div>
+                </a>
+            </div>
+            <div class="section">
+                <a href="cout_de_la_vie.html" target="_blank">
+                    <img src="images/dollarCA.jpg" alt="Coût de la vie">
+                    <div class="title">Coût de la vie</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- A propos card -->
+        <div id="A-propos" class="a-propos_first">
+            <section class="a-propos">
+                <div class="container2">
+                    <h2 class="section-title">À propos de StudyPathwayCA</h2>
+                    <div class="about-content">
+                        <p class="intro">StudyPathwayCA est votre ressource incontournable pour naviguer dans le processus d’admission aux études au Canada. Nous vous fournissons des informations claires et pratiques sur toutes les étapes nécessaires pour réussir votre projet d'études.</p>
+                        
+                        <p>Notre objectif est de vous accompagner dans votre démarche en offrant une vue d'ensemble 
+                            des différentes procédures administratives, des conseils sur la vie étudiante au Canada, 
+                            ainsi que des informations spécifiques sur les programmes d'études et les opportunités
+                             offertes par les établissements canadiens.
+                        </p>
+                        
+                        <p>Que vous soyez à la recherche d’informations sur le système éducatif canadien, 
+                            les démarches pour obtenir un visa étudiant, ou encore des conseils sur le logement et le coût de la vie, 
+                            StudyPathwayCA vous guide à chaque étape.
+                        </p>
+                        
+                        <p>Nous nous engageons à vous offrir des informations actualisées, fiables et pratiques pour vous préparer 
+                            au mieux à votre expérience d'études au Canada.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 StudyPathwayCA. Tous droits réservés. </p> <br>
+        <p><strong>E-mail :</strong> servicesdiab@gmail.com</p>
+    </footer>
+</body>
+</html>
