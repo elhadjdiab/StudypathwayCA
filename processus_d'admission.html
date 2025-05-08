@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Processus d'admission</title>
         <link rel="stylesheet" href="processus_admi.css">
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script>-->
     </head>
     <body>
         <header class="header">
             <div class="logo">StudyPathwayCA</div>
             <!-- Barre de recherche -->
-                    <div id="search-container" style="text-align: center; padding: 20px;">
+                    <!--<div id="search-container" style="text-align: center; padding: 20px;">
                         <input type="text" id="searchInput" placeholder="Rechercher un mot-clé..." style="padding: 8px; width: 60%; max-width: 200px">
                         <button onclick="searchKeyword()" style="padding: 8px 8px; background-color: black; color: white;">Chercher</button>
-                    </div>
+                    </div>-->
                     <button id="dark-mode-toggle">🌙 Sombre</button>
             <div class="social-icons">
                 <a href="#" aria-label="Facebook"><img src="images/facebook_icone.png" alt="Facebook"></a>
@@ -250,15 +250,17 @@
         const toggleMenuButton = document.getElementById("toggleMenuButton");
         const menu = document.querySelector(".menu");
 
-        // Ajoutez un gestionnaire d'événement pour cliquer sur le bouton
-        toggleMenuButton.addEventListener("click", function() {
-            //menu.classList.toggle("show"); // Ajouter/retirer la classe "show" pour afficher/masquer le menu
-            if (menu.classList.contains("show")) {
-            menu.classList.remove("show");
-            } else {
-                menu.classList.add("show");
-            }
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('toggleMenuButton');
+        const menu = document.querySelector('.menu');
+
+        if (button && menu) {
+            button.addEventListener('click', function() {
+                menu.classList.toggle('show');
+            });
+        }
+    });
+
 
         // Dark Mode
         document.getElementById("dark-mode-toggle").addEventListener("click", () => {
