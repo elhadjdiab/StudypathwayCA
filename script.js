@@ -38,6 +38,13 @@ function searchKeyword() {
     }
 }
 
-document.getElementById("toggleMenuButton").addEventListener("click", function () {
-    document.querySelector(".menu").classList.toggle("show");
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('toggleMenuButton');
+    const menu = document.querySelector('.menu');
+
+    if (button && menu) {
+        button.addEventListener('click', function() {
+            menu.classList.toggle('show');
+        });
+    }
 });
