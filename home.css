@@ -37,6 +37,58 @@ body::before {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+
+@media (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+    .header {
+        display: flex;
+        width: 100%;
+        background: #D32F2F; /* Rouge Canada */
+        color: white;
+        padding: 15px 40px;
+        font-size: 1rem;
+        
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    #toggleMenuButton {
+        display: block;
+        background: white;
+        color: #D32F2F;
+        font-size: 1.5rem;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: lowercase;
+        letter-spacing: 0.5px;
+    }
+    .social-icons {
+        display: none;
+    }
+
+    .sections {
+        margin-top: 25px ;
+    }
+    .container {
+        font-size: 14px;
+    }
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -150,7 +202,7 @@ nav {
   
 /* Page principale */
 .container {
-    width: 80%;
+    width: 100%;
     margin: 50px auto 0 auto;
     text-align: center;
 }
