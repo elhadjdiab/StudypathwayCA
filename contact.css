@@ -36,6 +36,10 @@ form {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#Soumettre {
+    background-color: #D32F2F;
+    color: white;
+}
 /* Footer */
 footer {
     text-align: center;

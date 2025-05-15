@@ -22,8 +22,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding:20px;
     border-radius: 5px;
+    position: fixed;
+    margin-top: 0;
 }
 
 .logo {
@@ -41,7 +44,7 @@ body {
 }
 
 /* NAVIGATION */
-nav {
+/* nav {
     background-color: #333;
     width: 250px;
     position: fixed; 
@@ -50,12 +53,24 @@ nav {
     background-color:  #f8f8f8;
     padding: 10px;
 
-}
+} */
 
 .menu {
     list-style: none;
     padding: 0;
     display: none;
+    background-color: #333;
+    width: 250px;
+    position: fixed; 
+    top: 90px;
+    border: 1px solid #ddd;
+    background-color:  #f8f8f8;
+    padding: 10px;
+}
+
+#toggleMenuButton {
+    background-color: #ddd;
+    border: none;
 }
 
 .menu.show {
@@ -109,8 +124,7 @@ nav {
 }
 
 /* STRUCTURE PRINCIPALE */
-.container {
-    margin-left: 270px;
+ .container {
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -118,11 +132,11 @@ nav {
     max-width: 1500px;
     margin: auto;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 /* PARTIE CENTRALE */
 .centre {
-    margin-left: 250px;
     flex: 3;
     background-color: white;
     padding: 20px;
@@ -132,12 +146,6 @@ nav {
     line-height: 1.6;
 }
 
-/* PARTIE LATÉRALE */
-.side {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .gauche {
     flex: 1;
@@ -163,13 +171,13 @@ nav {
 }
 
 /* PARTIE DROITE */
-.droite {
+/* .droite {
     flex: 1;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .title {
     padding: 10px;
@@ -180,14 +188,14 @@ nav {
 
 .side a {
     text-decoration: none;
-}
+} */
 
 
 /* FOOTER */
-footer {
+.footer {
     margin-top: 10px;
     padding: 40px;
-    background-color: #D32F2F;
+    background-color: #D32F2F ; 
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -211,4 +219,23 @@ footer {
 #button:hover {
     background-color: #b71c1c;
 }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .responsive {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social-icons img {
+    display: none;
+    }
+
+   .container {
+    flex-direction: column;
+   }
+}
+
 
