@@ -61,6 +61,11 @@ ul {
     margin-bottom: 15px;
 }
 
+.table_container {
+    overflow-x: auto;
+    width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -99,9 +104,9 @@ footer {
 }
 
 @media  (max-width : 768px) {
-       td {
+       /* table {
         writing-mode: vertical-rl;
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
         white-space: nowrap;
-    }
+    } */
 }
